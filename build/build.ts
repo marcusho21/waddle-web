@@ -2,6 +2,9 @@ import { copyFileSync } from 'fs';
 import { execSync } from 'child_process';
 
 const build = () => {
+  // remove dist folder
+  execSync('rm -rf dist');
+
   // build the project
   execSync('pnpm run build');
   execSync('pnpm run build:styles');
