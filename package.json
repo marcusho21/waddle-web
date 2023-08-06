@@ -5,14 +5,29 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "pack": "pnpm run build && pnpm pack --pack-destination pack"
   },
   "dependencies": {
     "lit": "^2.7.6"
   },
   "devDependencies": {
+    "@types/node": "^20.4.8",
+    "sass": "^1.64.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.1"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/waddle-web.es.js",
+      "require": "./dist/waddle-web.umd.js"
+    },
+    "./styles": "./dist/waddle-web.css"
   }
 }
