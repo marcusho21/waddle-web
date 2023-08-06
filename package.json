@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:styles": "sass --no-source-map --update public/styles:dist/styles/css",
     "pack": "ts-node-esm build/build.ts",
+    "prepublish": "pnpm run build",
     "publish": "cd dist && pnpm publish"
   },
   "dependencies": {
