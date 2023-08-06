@@ -9,7 +9,8 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'waddle-web',
       formats: ['es', 'umd'],
-      fileName: (format) => `waddle-web.${format}.js`,
+      fileName: (format) =>
+        `waddle-web${format === 'es' ? '' : `.${format}`}.js`,
     },
     rollupOptions: {
       external: ['lit', 'lit/decorators.js'],
@@ -19,15 +20,20 @@ export default defineConfig({
           'lit/decorators.js': 'litDecorators',
         },
       },
+      watch: {
+        include: ['src/**.ts', 'src/**.scss'],
+        exclude: 'src/**/*.test.ts',
+      },
+      plugins: [
+        dts({
+          include: ['src/**/*.ts', 'src/**/*.scss'],
+          exclude: ['src/**/*.test.ts'],
+        }),
+      ],
     },
+    sourcemap: true,
   },
   server: {
     port: 3000,
   },
-  plugins: [
-    dts({
-      include: ['src/**/*.ts'],
-      exclude: ['src/**/*.test.ts'],
-    }),
-  ],
 });

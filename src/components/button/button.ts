@@ -17,6 +17,6 @@ export class WdlButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'wa-button': WdlButton;
+    'wdl-button': WdlButton;
   }
 }
