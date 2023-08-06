@@ -1,23 +1,19 @@
 import { copyFileSync } from 'fs';
 import { execSync } from 'child_process';
+import chalk from 'chalk';
 
 const build = () => {
-  // remove dist folder
+  console.log(chalk.yellowBright('removing existing build...'));
   execSync('rm -rf dist');
 
-  // build the project
-  execSync('pnpm run build');
+  console.log(chalk.yellowBright('start building...'));
+  execSync('vite build');
   execSync('pnpm run build:styles');
 
-  // copy package.json to dist
+  console.log(chalk.yellowBright('copying package.json...'));
   copyFileSync('./package.json', './dist/package.json');
 
-  // run pnpm pack inside dist
-  execSync('cd dist && pnpm pack');
-
-  // remove pack folder then recreate it and copy the tarball to it
-  execSync('rm -rf pack && mkdir pack');
-  execSync('mv dist/*.tgz pack/');
+  console.log(chalk.greenBright('build complete!\n'));
 };
 
 build();
