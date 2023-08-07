@@ -2,7 +2,6 @@ import { LitElement, html, unsafeCSS } from 'lit';
 import { property, query } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { literal, html as staticHtml } from 'lit/static-html.js';
-import { ARIAMixinStrict } from '../../../utils/types/aria';
 import styles from './button.scss?inline';
 
 export abstract class Button extends LitElement {
