@@ -13,7 +13,7 @@ const publish = () => {
   }
 
   console.log(chalk.cyan('Publishing the package...'));
-  execSync('cd dist && pnpm publish');
+  execSync('cd dist && pnpm publish --access public');
   console.log(chalk.greenBright('Package published!\n'));
 };
 
