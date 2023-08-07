@@ -8,9 +8,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'waddle-web',
-      formats: ['es', 'umd'],
-      fileName: (format) =>
-        `waddle-web${format === 'es' ? '' : `.${format}`}.js`,
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['lit', 'lit/decorators.js'],

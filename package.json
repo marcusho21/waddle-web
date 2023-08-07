@@ -8,13 +8,20 @@
     "build": "ts-node-esm build/build.ts",
     "build:styles": "sass --no-source-map --update public/styles:dist/styles/css",
     "pack": "ts-node-esm build/build.ts && ts-node-esm build/pack.ts",
-    "publish": "ts-node-esm build/build.ts && ts-node-esm build/publish.ts"
+    "publish": "ts-node-esm build/build.ts && ts-node-esm build/publish.ts",
+    "test": "web-test-runner --config web-test-runner.config.js"
   },
   "dependencies": {
+    "@open-wc/lit-helpers": "0.4.0-next.1",
     "lit": "^2.7.6"
   },
   "devDependencies": {
+    "@open-wc/testing": "3.0.0-next.5",
+    "@remcovaes/web-test-runner-vite-plugin": "^1.2.0",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^20.4.8",
+    "@web/test-runner": "^0.17.0",
+    "@web/test-runner-playwright": "^0.10.1",
     "chalk": "^5.3.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.64.2",
@@ -28,10 +35,7 @@
     "."
   ],
   "exports": {
-    ".": {
-      "import": "./waddle-web.js",
-      "require": "./waddle-web.umd.js"
-    },
+    ".": "./waddle-web.js",
     "./styles/": "./styles/"
   }
 }
