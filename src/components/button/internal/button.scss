@@ -1,0 +1,12 @@
+.button {
+  background-color: var(--wdl-color-primary);
+  outline: none;
+
+  &:hover {
+    background-color: var(--wdl-color-teal-200);
+  }
+}
+
+.button-text {
+  color: var(--wdl-color-gray-50);
+}

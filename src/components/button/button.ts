@@ -1,22 +1,11 @@
-import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import styles from './button.scss?inline';
+import { Button } from './internal/button';
 
 @customElement('wdl-button')
-export class WdlButton extends LitElement {
-  static get styles() {
-    return [unsafeCSS(styles)];
-  }
-
-  render() {
-    return html`
-      <button><slot></slot></button>
-    `;
-  }
-}
+export class WdlButton extends Button {}
 
 declare global {
   interface HTMLElementTagNameMap {
-    'wdl-button': WdlButton;
+    'wdl-button': WdlButton & ARIAMixin;
   }
 }

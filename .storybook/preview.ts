@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/web-components';
 
 // import waddle-web build files for global usage
 import '../dist/waddle-web.js';
-import '../dist/styles/css/waddle-web.css';
+import '../dist/styles/waddle-web.scss';
 
 const preview: Preview = {
   parameters: {

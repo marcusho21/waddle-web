@@ -10,7 +10,14 @@ const build = () => {
   execSync('rm -rf dist');
 
   console.log(chalk.yellowBright('start building...'));
-  execSync('vite build');
+
+  const isWatch =
+    process.argv.includes('--watch') || process.argv.includes('-w');
+  if (isWatch) {
+    console.log(chalk.greenBright('watching for changes...\n'));
+  }
+
+  execSync('vite build' + (isWatch ? ' --watch' : ''));
   execSync('pnpm run build:styles');
 
   console.log(chalk.yellowBright('copying package.json...'));

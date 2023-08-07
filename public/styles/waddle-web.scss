@@ -1,4 +1,16 @@
 :root {
-  --wdl-color-primary: red;
-  --wdl-color-secondary: blue;
+  --wdl-color-teal-200: hsl(177, 68%, 45%);
+  --wdl-color-teal-400: hsl(177, 68%, 37%);
+  --wdl-color-teal-600: hsl(177, 68%, 20%);
+  --wdl-color-yellow-400: #ffcf00;
+  --wdl-color-red-400: #cc4733;
+  --wdl-color-gray-50: #ffffff;
+  --wdl-color-gray-100: #e6e6e6;
+  --wdl-color-gray-300: #8b8b8b;
+  --wdl-color-gray-400: #525252;
+  --wdl-color-gray-700: #333333;
+  --wdl-color-gray-900: #1a1c1b;
+
+  --wdl-color-primary: var(--wdl-color-teal-400);
+  --wdl-color-secondary: var(--wdl-color-yellow-400);
 }
