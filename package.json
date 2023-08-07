@@ -8,7 +8,7 @@
     "build": "ts-node-esm build/build.ts",
     "build:styles": "sass --no-source-map --update public/styles:dist/styles/css",
     "pack": "ts-node-esm build/build.ts && ts-node-esm build/pack.ts",
-    "publish": "ts-node-esm build/publish.ts"
+    "publish": "ts-node-esm build/build.ts && ts-node-esm build/publish.ts"
   },
   "dependencies": {
     "lit": "^2.7.6"

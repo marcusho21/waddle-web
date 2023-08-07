@@ -1,6 +1,9 @@
 import { execSync } from 'child_process';
 import chalk from 'chalk';
 
+/**
+ * @description script to pack the package for local testing
+ */
 const pack = () => {
   console.log(chalk.blue('Packing the package...'));
   execSync('cd dist && pnpm pack');
