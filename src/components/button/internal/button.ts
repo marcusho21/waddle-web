@@ -55,7 +55,7 @@ export abstract class Button extends LitElement {
   }
 
   protected override render() {
-    const { ariaLabel, ariaHasPopup, ariaExpanded } = this as ARIAMixinStrict;
+    const { ariaLabel, ariaHasPopup, ariaExpanded } = this;
     const button = this.href ? literal`a` : literal`button`;
 
     return staticHtml`
