@@ -6,9 +6,6 @@ import chalk from 'chalk';
  * @description script to build the package and copy package.json to dist
  */
 const build = () => {
-  console.log(chalk.yellowBright('removing existing build...'));
-  execSync('rm -rf dist');
-
   console.log(chalk.yellowBright('start building...'));
 
   const isWatch =

@@ -1,0 +1,19 @@
+:root {
+  --wdl-color-teal-200: hsl(177, 68%, 42%);
+  --wdl-color-teal-400: hsl(177, 68%, 37%);
+  --wdl-color-teal-600: hsl(177, 68%, 32%);
+
+  --wdl-color-yellow-400: hsl(49, 100%, 50%);
+
+  --wdl-color-red-400: hsl(8, 60%, 50%);
+
+  --wdl-color-gray-50: hsl(0, 0%, 100%);
+  --wdl-color-gray-100: hsl(0, 0%, 90%);
+  --wdl-color-gray-300: hsl(0, 0%, 55%);
+  --wdl-color-gray-400: hsl(0, 0%, 32%);
+  --wdl-color-gray-700: hsl(0, 0%, 20%);
+  --wdl-color-gray-900: hsl(150, 4%, 11%);
+
+  --wdl-color-primary: var(--wdl-color-teal-400);
+  --wdl-color-secondary: var(--wdl-color-yellow-400);
+}

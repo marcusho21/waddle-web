@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: 'src/index.ts',
       name: 'waddle-web',
       formats: ['es'],
     },
@@ -19,7 +19,7 @@ export default defineConfig({
         },
       },
       watch: {
-        include: ['src/**.ts', 'src/**.scss'],
+        include: ['src/**/*.ts', 'src/**/*.scss'],
         exclude: 'src/**/*.test.ts',
       },
       plugins: [

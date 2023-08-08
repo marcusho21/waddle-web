@@ -33,14 +33,14 @@ export abstract class Button extends LitElement {
 
   @query('.button') private readonly button?: HTMLButtonElement;
 
-  // form support setup
+  // form control support setup
   static get formAssociated() {
     return true;
   }
 
-  private readonly internals = this.attachInternals();
+  readonly #internals = this.attachInternals();
 
-  static shadowRootOptions = {
+  static readonly shadowRootOptions = {
     ...LitElement.shadowRootOptions,
     delegatesFocus: true,
   };

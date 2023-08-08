@@ -4,10 +4,11 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "vite": "vite",
     "dev": "vite",
     "build": "ts-node-esm scripts/build.ts",
     "build:watch": "ts-node-esm scripts/build.ts --watch",
-    "build:styles": "sass --no-source-map --update public/styles:dist/styles/css",
+    "build:styles": "sass --no-source-map --update ./public/styles:dist/styles/css",
     "pack": "ts-node-esm scripts/build.ts && ts-node-esm scripts/pack.ts",
     "publish": "ts-node-esm scripts/build.ts && ts-node-esm scripts/publish.ts",
     "test": "web-test-runner --config web-test-runner.config.js",
